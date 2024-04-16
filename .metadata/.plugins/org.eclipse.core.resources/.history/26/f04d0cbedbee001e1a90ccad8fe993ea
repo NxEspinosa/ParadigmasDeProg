@@ -1,0 +1,28 @@
+package unlam.paradigmas.diagnostico;
+
+public class Ejercicio05 {
+
+	public static int[][] resolver(int[][] m) {
+		
+		int[][] matrizAux = new int[2*(m.length-1)][2*(m.length-1)];
+		int auxJ = 0;
+
+		for (int i = 0; i < matrizAux.length; i++)
+			for (int j = 0;j < matrizAux[i].length; j++)
+				matrizAux[i][j] = 0;
+		
+		
+		for (int i = 3; i >= 0; i--)
+		{
+			for (int x = i; x <= 3; x++)
+			{
+				matrizAux[3-i][auxJ] = m[x][auxJ];
+				auxJ++;
+			}
+			auxJ = 0;
+		}
+
+		
+		return matrizAux;
+	}
+}

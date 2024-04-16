@@ -1,0 +1,14 @@
+package unlam.paradigmas.diagnostico;
+
+public class Ejercicio05 {
+
+	public static int[][] resolver(int[][] m) {
+		
+		int[][] matrizAux = new int[2*(m.length-1)][];
+		
+		
+		
+		
+		return null;
+	}
+}

@@ -1,0 +1,18 @@
+package unlam.paradigmas.objetos.ej01;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import edu.unlam.matematica.Vector;
+
+class NotaTest {
+
+	@Test
+	void test() {
+		new Nota(-1);
+		
+		assertEquals(new Nota(-1), new Nota(0));
+	}
+
+}

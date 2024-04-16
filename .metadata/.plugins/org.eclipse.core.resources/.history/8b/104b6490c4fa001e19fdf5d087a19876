@@ -1,0 +1,46 @@
+package unlam.paradigmas.objetos.ej04;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class testCubo {
+	Cubo cubo = new Cubo(4);
+	@Test
+	void testObtenerLado() {
+		assertEquals(cubo.obtenerLado(), 4);
+	}
+	
+	@Test
+	void testCambiarLado() {
+		cubo.cambiarLado(2);
+	
+		assertEquals(cubo.obtenerLado(), 2);
+	}	
+	
+	@Test
+	void testobtenerVolumen() {
+		
+		assertEquals(cubo.obtenerVolumen(), 64);
+	}	
+	
+	@Test
+	void testobtenerAreaCara() {
+		assertEquals(cubo.obtenerAreaCara(), 16);
+	}	
+	
+	@Test
+	void testcambiarAreaCara() {
+		cubo.cambiarAreaCara(25);
+		assertEquals(cubo.obtenerAreaCara(), 25);
+	}	
+	
+	@Test
+	void testcambiarVolumen() {
+		
+		cubo.cambiarVolumen(194.6);
+		
+		
+		assertEquals(Math.round(cubo.obtenerVolumen()*100)/10.00, 194.6);
+	}
+}

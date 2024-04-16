@@ -1,0 +1,14 @@
+package unlam.paradigmas.objetos.ej05;
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class testTarjetaBaja {
+
+	TarjetaBaja tarjeta = new TarjetaBaja(1000);
+	@Test
+	void testobtenerSaldo() {
+		assertEquals(TarjetaBaja.obtenerSaldo(), 1000);
+	}
+
+}

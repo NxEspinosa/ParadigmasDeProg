@@ -1,0 +1,42 @@
+package unlam.paradigmas.objetos.ej01;
+
+public class Nota {
+	
+	private int nota;
+	
+    public int getNota() {
+		return nota;
+	}
+
+	public void setNota(int nota) {
+		this.nota = nota;
+	}
+
+    public Nota(int valorInicial) throws Exception {
+	    try {
+	    	if (valorInicial > 0 && valorInicial <= 10) {
+	    		this.setNota(valorInicial);
+	    	}
+	    	else throw new Exception("Error la nota no es valida");
+	    }
+	    catch(Exception ex) {
+	    	throw ex;
+	    }
+    }
+    
+
+    public int obtenerValor() {
+    	return getNota();
+    }
+    
+
+    public boolean aprobado() {
+    	return this.nota >= 4;
+    }
+    
+    public boolean desaprobado() {
+    	return this.nota <= 4;
+    }
+
+
+}

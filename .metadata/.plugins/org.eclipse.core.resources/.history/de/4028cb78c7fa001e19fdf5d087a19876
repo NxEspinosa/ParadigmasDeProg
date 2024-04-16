@@ -1,0 +1,12 @@
+package unlam.paradigmas.objetos.ej06;
+
+class Cerradura {
+    public Cerradura(int claveDeApertura, int cantidadDeFallosConsecutivosQueLaBloquean);
+    public boolean abrir(int clave);
+    public void cerrar();
+    public boolean estaAbierta();
+    public boolean estaCerrada();
+    public boolean fueBloqueada();
+    public int contarAperturasExitosas();
+    public int contarAperturasFallidas();
+}

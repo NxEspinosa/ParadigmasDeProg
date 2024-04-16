@@ -1,0 +1,48 @@
+package unlam.paradigmas.diagnostico;
+
+public class Ejercicio04 {
+
+	public static int[] resolver(int[][] m) {
+		// Escribir un método en Java que de una matriz numérica dada, devuelva un vector con n elementos, donde cada 
+		//elemento es la moda de una fila. Si hubiese más de una moda, se deberá utilizar la de mayor valor
+		int moda = 0;
+		int aux = 0;
+		int count = 0;
+		int mayor = 0;
+		
+		int[] vectorAux = new int[m.length];
+		int[] vectorModa = new int [m.length];
+		
+		for (int i = 0; i < m.length; i++)
+		{			
+			// obtengo el vector
+			vectorAux = m[i];
+		
+			for (int j = 0; j < m[i].length; j++)
+			{
+				aux = vectorAux[j];
+				
+				for (int k = 0; k < vectorAux.length; k++)
+				{
+					if (aux == vectorAux[k])
+					{
+						count++;
+						
+						vectorAux[j] = count;
+					}
+				}
+				
+				if (j != 0 &&  vectorAux[j] >= mayor)
+					mayor = vectorAux[j];
+					if (m[i][j] > moda)
+						moda = m[i][j];
+				
+				count = 0;
+			}
+			moda = 0;
+		}
+		
+		
+		return null;
+	}
+}

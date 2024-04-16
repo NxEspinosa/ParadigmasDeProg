@@ -1,0 +1,22 @@
+package unlam.paradigmas.diagnostico;
+
+public class Ejercicio03 {
+
+	public static int[][] resolver(int[][] m) {
+		// completar
+		int matrizAux[][] = new int[m.length][];
+		
+		for (int i = 0; i < m.length; i++)
+			for (int j = 0; j < m[i].length; j++)
+			{				
+				if (i == 0 && j == 0 && i == m.length-1 && j == m[i].length-1)
+					matrizAux[i][j] = m[i][j];
+				if (i == 0)
+					matrizAux[i][j] = m[i][j+1] + m[i+1][j-1];
+				
+					                         ]
+			}
+		
+		return null;
+	}
+}

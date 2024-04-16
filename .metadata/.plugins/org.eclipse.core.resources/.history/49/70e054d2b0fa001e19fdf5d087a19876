@@ -1,0 +1,47 @@
+package unlam.paradigmas.objetos.ej01;
+
+public class Nota {
+	
+	// completar
+	private int nota;
+	
+	
+    public int getNota() {
+		return nota;
+	}
+
+	public void setNota(int nota) {
+		this.nota = nota;
+	}
+
+    public Nota(int valorInicial) {
+    	if (valorInicial > 0 && valorInicial <= 10) {
+    		this.setNota(valorInicial);
+    	}
+    }
+    
+
+    public int obtenerValor() {
+    	return getNota();
+    }
+    
+    /**
+     * post: indica si la Nota permite o no la aprobación.
+     */
+    public boolean aprobado() {
+    	if (this.nota >= 4)
+    		return true;
+    	return false;
+    }
+    
+    /**
+     * post: indica si la Nota implica desaprobación.
+     */
+    public boolean desaprobado() {
+    	if (this.nota <= 4)
+    		return true;
+    	return false;
+    }
+
+
+}

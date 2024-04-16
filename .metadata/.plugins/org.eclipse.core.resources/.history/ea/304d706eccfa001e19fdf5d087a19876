@@ -1,0 +1,38 @@
+package unlam.paradigmas.objetos.ej06;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class CerraduraTest {
+	
+	Cerradura cerradura = new Cerradura(1234, 3);
+
+	@Test
+	void testAbrir() {
+		cerradura.abrir(1234);
+		
+		assertTrue(cerradura.estaAbierta());
+	}
+	
+	@Test
+	void testBloquear() {
+		
+		cerradura.abrir(1235);
+		cerradura.abrir(1235);
+		cerradura.abrir(1233);
+		cerradura.abrir(1231);
+		
+		assertTrue(cerradura.fueBloqueada());
+	}
+
+	@Test
+	void testCerrar() {
+		
+		cerradura.cerrar();
+		cerradura.abrir(1234);
+		cerradura.cerrar();
+		
+		assertTrue(cerradura.estaCerrada());
+	}
+}

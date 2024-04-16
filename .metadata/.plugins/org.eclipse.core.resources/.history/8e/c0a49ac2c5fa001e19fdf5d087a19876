@@ -1,0 +1,13 @@
+package unlam.paradigmas.objetos.ej05;
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class testTarjetaBaja {
+
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
+}

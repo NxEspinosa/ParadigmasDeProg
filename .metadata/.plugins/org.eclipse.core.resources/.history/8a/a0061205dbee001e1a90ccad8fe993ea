@@ -1,0 +1,73 @@
+package unlam.paradigmas.diagnostico;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		int matriz[][] = {{1, 2, 3},{4,1,6},{7,8,2}};
+		int matriz2[][] = {{1, 2, 3},{4,2,6},{7,8,2}};
+		int[][] matrizDaCero = {
+				{ 0, 2, 3, 4 },
+				{ 4, 5, 6, 5 },
+				{ 7, 8, 9 }
+		};
+		int[][] matrizNoDaCero = {
+				{ 1, 2, 3, 4 },
+				{ 4, 5, 6, 5 },
+				{ 7, 8, 9 },
+				{1}
+		};
+		
+		int[][] matriz03 = {
+				{8,2,-3,4},
+				{5,-6,-6,20},
+				{ 21,1,-5,0}
+		};
+		
+		int[][] matriz04 = {
+				 {1,  2,  3,  4},
+				 {5, -6, -6, 20},
+				 {1,  1, 10, 10},
+		};
+		
+		int[][] matriz05 = {
+				 {1, 2,  3,  4},
+					 {5,  6 , 7,  8},
+					 {9, 10, 11, 12},
+					{13 ,14, 15, 16},
+		};
+		//System.out.print(matriz.length);
+		formatear(Ejercicio01.resolver(matriz));
+		
+		formatear( Ejercicio01.resolver(matriz2) );
+		
+		formatear( Ejercicio02.resolver(matrizDaCero) );
+		
+		formatear ( Ejercicio02.resolver(matrizNoDaCero));
+				
+	/*	int[][] nuevaMatriz = Ejercicio03.resolver(matriz03);
+		
+		for (int i = 0; i < nuevaMatriz.length; i++)
+			for (int j = 0; j < nuevaMatriz[i].length; j++ )
+				System.out.print(String.valueOf(nuevaMatriz[i][j]) + ' ');
+		
+		int[] nuevoVector =   Ejercicio04.resolver(matriz04);
+		
+		for (int i = 0; i < nuevoVector.length; i++)
+			System.out.print((String.valueOf(nuevoVector[i]) + ' '));
+		
+		*/
+		
+		int [][] matrizResultado = Ejercicio05.resolver(matriz05);
+		for (int i = 0; i < 2*(matriz05.length-1); i++)
+			for (int j = 0; j < matriz05[i].length; j++ )
+				System.out.print((String.valueOf([i][j]) + ' '));
+
+	}
+	
+	private static void formatear(boolean resultado)
+	{
+		System.out.print( String.valueOf( resultado ) + '\n' );
+	}
+
+}

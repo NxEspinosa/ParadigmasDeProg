@@ -1,0 +1,14 @@
+package unlam.paradigmas.objetos.ej06;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class CerraduraTest {
+
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
+}

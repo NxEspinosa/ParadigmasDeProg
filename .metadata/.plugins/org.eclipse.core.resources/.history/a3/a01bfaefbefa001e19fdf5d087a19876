@@ -1,0 +1,26 @@
+package unlam.paradigmas.objetos.ej03;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class CirculoTest {
+	
+	Circulo circulo = new Circulo(3);
+
+	@Test
+	void testRadio() {
+		assertEquals(circulo.obtenerRadio(), 3);		
+	}
+	
+	@Test
+	void testRadio() {
+		assertEquals(circulo.diametro(), 6);		
+	}
+
+}
+
+//•radio
+//diametro
+//perimetro
+//area

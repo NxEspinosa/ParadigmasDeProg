@@ -1,0 +1,13 @@
+package unlam.paradigmas.diagnostico;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Ejercicio01 prueba = new Ejercicio01();
+		int matriz[][] = {{1, 2, 3,},{4,1,6},{7,8,2}};
+		
+		System.out.print( prueba.resolver(matriz) );
+
+	}
+
+}
